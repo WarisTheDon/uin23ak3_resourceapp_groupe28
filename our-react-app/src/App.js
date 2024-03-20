@@ -1,6 +1,8 @@
 import React from 'react'; // Legg til React import
 
-import './App.css'; // Importer CSS-filen
+import './css/sass/main.scss'; // Importer SCSS-filen
+
+
 
 function App() {
   return (
