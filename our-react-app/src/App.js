@@ -1,6 +1,6 @@
-import './css/main.css';
-import { hentAlleVarer } from './sanity/service';
-import { useEffect, useState } from 'react';
+import React from 'react'; // Legg til React import
+
+import './App.css'; // Importer CSS-filen
 
 function App() {
   return (
