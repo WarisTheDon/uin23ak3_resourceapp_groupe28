@@ -1,10 +1,4 @@
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import { Switch } from 'react-router-dom';
-
-import './css/sass/main.scss'; 
-import Resources from './Resources'; 
-
-const resources = [
+const resourcesData = [
     {
         category: "HTML",
         text: "HTML står for HyperText Markup Language, og er et strukturspråk som brukes for å lage strukturer til nettside- og applikasjonsgrensesnitt.",
@@ -101,27 +95,4 @@ const resources = [
     },
 ];
 
-function App() {
-  return (
-    <Router>
-      <div id="container">
-        <nav>
-          <ul>
-            {resources.map(resource => (
-              <li key={resource.category}><Link to={`/${resource.category.toLowerCase()}`}>{resource.category}</Link></li>
-            ))}
-          </ul>
-        </nav>
-        <main>
-          <Routes>
-            {resources.map(resource => (
-              <Route key={resource.category} path={`/${resource.category.toLowerCase()}`} element={<Resources category={resource.category.toLowerCase()} />} />
-            ))}
-          </Routes>
-        </main>
-      </div>
-    </Router>
-  );
-}
-
-export default App;
+export default resourcesData;
